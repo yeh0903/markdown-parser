@@ -16,6 +16,8 @@ public class MarkdownParse {
             int closeBracket = markdown.indexOf("]", openBracket);
             int openParen = markdown.indexOf("(", closeBracket);
             int closeParen = markdown.indexOf(")", openParen);
+            //there should be an if statement for checking the existence of backslash in
+            //links, since if should be discarded when parsing the link
             if (openBracket == -1 || closeBracket == -1 || openParen == -1 || closeParen == -1) {
                 currentIndex = currentIndex + 1;
                 continue;
